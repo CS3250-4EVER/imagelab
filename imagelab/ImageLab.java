@@ -17,17 +17,16 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/*
  * ImageLab is a platform for image filter development.  ImageLab
  * begins by building a menu of all available filters (those .class files
  * that implement the {@link ImageFilter ImageFilter} interface).
- * [TODO: User interface to allow chosing directory to search for filters.
- * [TODO: User interface to allow displaying images a line or pixel at a time.
  *
  * @author Dr. Aaron Gordon
  * @author Dr. Jody Paul
  * @version 1.8.1
  */
+ /** Class for ImageLab. */
 public class ImageLab {
     /** Version Identification. */
     public static final String VERSION = "ImageLab 1.8";
@@ -188,7 +187,8 @@ public class ImageLab {
                             "imagelab.ImageFilter");
                     } //for ja
                     if (isFilter) {
-                        ifilter = (ImageFilter) cl.getDeclaredConstructor().newInstance();
+                        ifilter = (ImageFilter)
+                        cl.getDeclaredConstructor().newInstance();
                         filters.add(ifilter);
                         JMenuItem jmi = new JMenuItem(ifilter.getMenuLabel());
                         filter.add(jmi);
@@ -263,7 +263,8 @@ public class ImageLab {
         return new ActionListener() {
             public void actionPerformed(final ActionEvent ev) {
                 if (impro == null) {
-                    JOptionPane.showMessageDialog(myframe, "You must first select an image");
+                    JOptionPane.showMessageDialog(myframe, "You must first"
+                    + "select an image");
                     return;
                 }
                 //System.out.println("Using impro number " + impro.getid());
@@ -332,7 +333,8 @@ public class ImageLab {
                 //The imgProvider holding the image
                 ImgProvider improvider = impro;
                 if (improvider == null) {
-                    JOptionPane.showMessageDialog(myframe, "First select the image to play");
+                    JOptionPane.showMessageDialog(myframe, "First select"
+                    + "the image to play");
                     return;
                 } //if
                 improvider.play();
@@ -351,7 +353,8 @@ public class ImageLab {
             public void actionPerformed(final ActionEvent e) {
                 ImgProvider improvider = impro; // Hold the image.
                 if (improvider == null) {
-                    JOptionPane.showMessageDialog(myframe, "Select the image to save");
+                    JOptionPane.showMessageDialog(myframe, "Select the"
+                    + "image to save");
                     return;
                 } //if
                 improvider.save();
