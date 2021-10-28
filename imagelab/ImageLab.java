@@ -163,8 +163,7 @@ public class ImageLab {
 	//Add new tab in program called test
 	JMenu test = new JMenu("test");
 	mbar.add(test);
-	JMenuItem play = new JMenuItem("Play", 'P');
-        file.add(play);
+
 	
 	
 	
