@@ -136,6 +136,7 @@ public class ImageLab {
      *
      * @return a menu bar populated with menu items
      */
+     
     private JMenuBar buildMenus() {
         JMenuBar mbar = new JMenuBar();
         JMenu file = new JMenu("File");
@@ -145,7 +146,7 @@ public class ImageLab {
         open.addActionListener(makeOpenListener());
         JMenuItem play = new JMenuItem("Play", 'P');
         file.add(play);
-        play.addActionListener(makePlayListener());
+        //play.addActionListener(makePlayListener());
         JMenuItem save = new JMenuItem("Save", 'S');
         file.add(save);
         save.addActionListener(makeSaveListener());
@@ -158,6 +159,16 @@ public class ImageLab {
                                    }
                                }
         );
+        
+	//Add new tab in program called test
+	JMenu test = new JMenu("test");
+	mbar.add(test);
+	JMenuItem play = new JMenuItem("Play", 'P');
+        file.add(play);
+	
+	
+	
+	
         JMenu filter = new JMenu("Filter");
         mbar.add(filter);
         //Find filters and build corresponding menu items.
@@ -213,6 +224,8 @@ public class ImageLab {
      * @param who Display Image used for Action Event
      * @return the new File menu
      */
+     
+  
     public static JMenu newFileMenu(final DisplayImage who) {
         JMenu fileMenu = new JMenu("File");
         //        JMenuItem open = new JMenuItem("Open",'O');

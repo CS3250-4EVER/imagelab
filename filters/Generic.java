@@ -62,7 +62,7 @@ public class Generic implements ImageFilter {
    *
    * @return the filter's menu item label
    */
-  public String getMenuLabel() {
+  public String getMenuLabel()	 {
     return "Generic";
   } //getMenuLabel
 
